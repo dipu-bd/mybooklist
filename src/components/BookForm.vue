@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'bookform'
+  name: 'bookform'
 }
 </script>
 

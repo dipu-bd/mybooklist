@@ -6,10 +6,7 @@
 
 <script>
 export default {
-  name: 'app',
-  computed: {
-    
-  }
+  name: 'app'
 }
 </script>
 
