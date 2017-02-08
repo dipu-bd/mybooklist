@@ -1,19 +1,21 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Hello from 'components/Hello'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-import BookList from 'components/BookList'
-import Book from 'components/Book'
-import MyList from 'components/MyList'
+import Home from 'components/Home';
+import Book from 'components/Book';
+import MyList from 'components/MyList';
+import BookList from 'components/BookList';
+import BookForm from 'components/BookForm';
 
-Vue.use(Router)
+
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'Home',
+      component: Home
     },
     {
       path: '/books',
@@ -24,6 +26,21 @@ export default new Router({
       path: '/view/:id',
       name: 'Book',
       component: Book
+    },
+    {
+      path: '/edit/:id',
+      name: 'EditBook',
+      component: BookForm
+    },
+    {
+      path: '/add',
+      name: 'AddBook',
+      component: BookForm
+    },
+    {
+      path: '/list',
+      name: 'MyList',
+      component: MyList
     }
   ]
-})
+});
