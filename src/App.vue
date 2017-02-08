@@ -1,22 +1,31 @@
 <template>
-  <div id="app">    
-    <router-view></router-view>
-  </div>
+  <section id="app">
+    <app-view>
+      <app-nav slot="navbar"></app-nav>
+      <router-view></router-view>
+    </app-view>
+    <app-footer></app-footer>
+  </section>
 </template>
 
 <script>
+import AppView from 'components/AppView'
+import AppNav from 'components/Navbar'
+import AppFooter from 'components/Footer'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    AppNav,
+    AppView,
+    AppFooter
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 </style>

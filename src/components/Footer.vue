@@ -1,19 +1,20 @@
 <template>
-  <div>
+  <div id="footer">
     This is footer
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'footer'
-  }
+export default {
+  name: 'footer'
+}
 </script>
 
 <style scoped>
-  div {
-    height: 30px;
-    text-align: center;
-    background: teal;
-  }
+#footer {
+  border: 0;
+  height: 30px;
+  text-align: center;
+  background: teal;
+}
 </style>
