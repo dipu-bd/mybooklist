@@ -1,5 +1,5 @@
 <template>
-  <section id="app" v-scroll="onScroll">
+  <section id="app">
     <app-view>
       <app-nav slot="navbar"></app-nav>
       <router-view slot="content"></router-view>

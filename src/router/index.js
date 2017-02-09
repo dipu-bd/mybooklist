@@ -15,37 +15,37 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: 'home',
       component: Home
     },
     {
       path: '/books',
-      name: 'BookList',
+      name: 'books',
       component: BookList
     },
     {
       path: '/list',
-      name: 'MyList',
+      name: 'list',
       component: MyList
     },
     {
       path: '/add',
-      name: 'AddBook',
+      name: 'add',
       component: BookForm
     },
     {
       path: '/edit/:id',
-      name: 'EditBook',
+      name: 'edit',
       component: BookForm
     },
     {
       path: '/view/:id',
-      name: 'Book',
+      name: 'view',
       component: Book
     },
     {
       path: '*',
-      name: 'Invalid',
+      name: '404',
       component: NotFound
     }
   ]

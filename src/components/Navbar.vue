@@ -1,18 +1,19 @@
 <template>
-  <div class="navbar navbar-inverse navbar-static-top">      
+  <div class="navbar navbar-inverse navbar-static-top">
     <div class="container">
-
-      <!-- Show header text -->
-      <div class="navbar-header">      
+      <div class="navbar-header">
         <button type="button" 
                 class="navbar-toggle collapsed" 
                 data-toggle="collapse" 
-                data-target="#bs-example-navbar-collapse-1" 
+                data-target="#bs-example-navbar-collapse-1"
                 aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span v-for="i in 3" class="icon-bar"></span>
         </button>
-        <router-link class="navbar-brand" to="/">{{ title }}</router-link>
+
+        <router-link class="navbar-brand" to="/">
+          <span>{{ title }}</span>
+        </router-link>        
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -20,16 +21,16 @@
         <ul class="nav navbar-nav navbar-right">
           <li v-for="{link, text} in navlinks" :class="{ active: isActive(link) }">
             <router-link :to="link">{{ text }}</router-link>
-          </li>                
-        </ul>        
+          </li>
+        </ul>
       </div>
-    
-    </div>    
+
+    </div>
   </div>
 </template>
 
-<script>
-export default {
+<script> 
+export default {  
   name: 'AppNav',
   props: {
     title: {
@@ -37,7 +38,7 @@ export default {
       default: 'My Book List'
     }
   },
-  data: function () {
+  data() {
     return {
       navlinks: [
         { link: '/', text: 'Home' },
@@ -48,9 +49,36 @@ export default {
     }
   },
   methods: {
-    isActive: function (link) {
-      return false
+    isActive: function(link) {
+      return this.$route.path === link
     }
   }
 }
 </script>
+
+<style scoped>
+.navbar {
+  margin: 0
+}
+</style>
+
+<!-- 
+
+  <b-navbar fixed="top" type="inverse" variant="inverse" toggleable> 
+
+      <b-nav-toggle target="nav_collapse"></b-nav-toggle>
+
+      <router-link class="navbar-brand" to="/">
+        <span>{{ title }}</span>
+      </router-link>
+
+      <b-collapse isNav id="nav_collapse">
+        <b-nav class="navbar-right" isNavBar>
+          <b-nav-item v-for="{link, text} in navlinks" :to="link" :active="isActive(link)">
+            {{ text }}
+          </b-nav-item>
+        </b-nav>
+      </b-collapse> 
+      
+  </b-navbar>
+  -->
