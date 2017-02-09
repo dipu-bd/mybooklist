@@ -1,7 +1,7 @@
 <template>
   <div class="main-view">
     <slot name="navbar">Navigation bar</slot>
-    <slot></slot>
+    <slot name="content"></slot>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style scoped>
-.main-view {  
+.main-view {    
   min-height: 100vh;  
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <section id="app">
+  <section id="app" v-scroll="onScroll">
     <app-view>
       <app-nav slot="navbar"></app-nav>
-      <router-view></router-view>
+      <router-view slot="content"></router-view>
     </app-view>
     <app-footer></app-footer>
   </section>
@@ -19,6 +19,17 @@ export default {
     AppNav,
     AppView,
     AppFooter
+  },
+  data: function () {
+    return {
+      position: 0
+    }
+  },
+  methods: {
+    onScroll: function (e, position) {
+      console.log(e, position)
+      this.position = position
+    }
   }
 }
 </script>

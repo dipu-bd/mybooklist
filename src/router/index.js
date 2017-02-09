@@ -10,6 +10,7 @@ import BookForm from 'components/BookForm'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -22,14 +23,9 @@ export default new Router({
       component: BookList
     },
     {
-      path: '/view/:id',
-      name: 'Book',
-      component: Book
-    },
-    {
-      path: '/edit/:id',
-      name: 'EditBook',
-      component: BookForm
+      path: '/list',
+      name: 'MyList',
+      component: MyList
     },
     {
       path: '/add',
@@ -37,9 +33,14 @@ export default new Router({
       component: BookForm
     },
     {
-      path: '/list',
-      name: 'MyList',
-      component: MyList
+      path: '/edit/:id',
+      name: 'EditBook',
+      component: BookForm
+    },
+    {
+      path: '/view/:id',
+      name: 'Book',
+      component: Book
     }
   ]
 })
