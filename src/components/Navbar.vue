@@ -12,7 +12,7 @@
           <span class="sr-only">Toggle navigation</span>
           <span v-for="i in 3" class="icon-bar"></span>
         </button>
-        <router-llink class="navbar-brand" to="/" exact>{{ title }}</router-llink>
+        <router-link class="navbar-brand" to="/">{{ title }}</router-link>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->

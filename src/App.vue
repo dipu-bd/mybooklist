@@ -22,12 +22,12 @@ export default {
   },
   data: function () {
     return {
-      position: 0
+      position: { scrollTop: 0, scrollLeft: 0 }
     }
   },
   methods: {
     onScroll: function (e, position) {
-      console.log(e, position)
+      console.log(position)
       this.position = position
     }
   }

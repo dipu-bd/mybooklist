@@ -6,6 +6,7 @@ import Book from 'components/Book'
 import MyList from 'components/MyList'
 import BookList from 'components/BookList'
 import BookForm from 'components/BookForm'
+import NotFound from 'components/NotFound'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/view/:id',
       name: 'Book',
       component: Book
+    },
+    {
+      path: '*',
+      name: 'Invalid',
+      component: NotFound
     }
   ]
 })
