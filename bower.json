@@ -1,0 +1,24 @@
+{
+  "name": "mybooklist",
+  "description": "Practice Vue.js project",
+  "main": "index.html",
+  "authors": [
+    "dipu-bd <dipu.sudipta@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "vuejs"
+  ],
+  "homepage": "https://github.com/dipu-bd/mybooklist",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
