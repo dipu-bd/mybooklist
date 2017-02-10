@@ -1,7 +1,7 @@
 <template>
   <section id="app">
     <app-view>
-      <app-nav slot="navbar"></app-nav>
+      <app-nav slot="navbar" v-show="showNav"></app-nav>
       <router-view slot="content"></router-view>
     </app-view>
     <app-footer></app-footer>
@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import AppView from 'components/AppView'
 import AppNav from 'components/Navbar'
+import AppView from 'components/AppView'
 import AppFooter from 'components/Footer'
 
 export default {
@@ -20,15 +20,9 @@ export default {
     AppView,
     AppFooter
   },
-  data: function () {
-    return {
-      position: { scrollTop: 0, scrollLeft: 0 }
-    }
-  },
-  methods: {
-    onScroll: function (e, position) {
-      console.log(position)
-      this.position = position
+  computed: {
+    showNav() {
+      return this.$route.name !== 'home'
     }
   }
 }
