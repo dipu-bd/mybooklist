@@ -2,12 +2,27 @@ import { validators } from 'vue-form-generator'
 
 export default {
   model: {
-    id: 1,
     name: '',
     authors: '',
-    pages: 1,
+    pages: null,
     publish: null,
-    isbn: ''
+    isbn: '',
+    clear() {
+      this.name = ''
+      this.authors = ''
+      this.pages = null
+      this.publish = null
+      this.isbn = ''
+    },
+    data() {
+      return {
+        name : this.name,
+        authors: this.authors.split(';').map((v)=> v.trim()),
+        pages: Number(this.pages),
+        publish: this.publish,
+        isbn: this.isbn
+      }
+    }
   },
 
   formOptions: {
@@ -19,18 +34,11 @@ export default {
     fields: [
       {
         type: 'input',
-        label: 'ID (disabled text field)',
-        model: 'id',
-        readonly: true,
-        visible: false
-      },
-      {
-        type: 'input',
         inputType: 'text',
         label: 'Name',
         model: 'name',
         minlength: 2,
-        maxlength: 50,
+        maxlength: 255,
         placeholder: 'Book name',
         required: true,
         featured: true,
@@ -41,9 +49,8 @@ export default {
         multi: true,
         label: 'Authors',
         model: 'authors',
-        minlength: 2,
         placeholder: 'Names of the authors',
-        hint: 'Separate names by a comma.',
+        hint: 'Separate names by a semi-colon.',
         required: true,
         validator: validators.string
       },
@@ -61,7 +68,6 @@ export default {
         inputType: 'text',
         label: 'ISBN',
         model: 'isbn',
-        minlength: 4,
         maxlength: 25,
         placeholder: 'ISBN Number',
         validator: validators.string
@@ -73,13 +79,9 @@ export default {
         model: 'publish',
         validator: validators.date,
         pikadayOptions: {
-          position: 'top left',
-          maxDate: new Date()
+          position: 'top left'
+          
         }
-      },
-      {
-        type: 'submit',
-        buttonText: 'Submit'
       }
     ]
   }
