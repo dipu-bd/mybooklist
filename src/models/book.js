@@ -7,6 +7,7 @@ export default {
     pages: null,
     publish: null,
     isbn: '',
+
     clear() {
       this.name = ''
       this.authors = ''
@@ -14,6 +15,7 @@ export default {
       this.publish = null
       this.isbn = ''
     },
+    
     data() {
       return {
         name : this.name,

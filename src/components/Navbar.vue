@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       navlinks: [
-        { link: '/', text: 'Home' },
+        //{ link: '/', text: 'Home' },
         { link: '/books', text: 'Books' },
         { link: '/list', text: 'My List' },
         { link: '/add', text: 'Add Book' }

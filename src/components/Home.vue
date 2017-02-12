@@ -2,7 +2,13 @@
   <div id="home-page">
     <div class="glossy-back">
       <div class="row">
-        <h1 id="page-title" class="col-xs-12">My Book List</h1>
+        <span id="page-title" class="col-xs-12">
+          My Book List
+        </span>
+        <span id="page-subtitle">
+          Make your own list of books <br> 
+          and keep track of your reading
+        </span>
       </div>
       <div class="row">
         <div class="col-sm-6">
@@ -38,21 +44,32 @@
   }
   
   .glossy-back {
-    background: rgba(0, 0, 0, 0.50);
+    background: rgba(0, 0, 0, 0.75);
     padding: 2em 5em;
-    box-shadow: 0px 1px 10px #000;
+    box-shadow: 0 0 10px 2px #000;
+    border-radius: 10px;
   }
   
   #page-title {
-    color: white;
-    font-size: 5em;
-    padding: 10px 0 20px 0;
-    font-family: 'Cabin', sans-serif;
-    text-shadow: 0px 0px 10px #000;
-  }
-
-  .round-button {
+    display: block;
+    color: snow;
+    font-size: 4.5em;
+    padding-top: 10px;
+    font-weight: 700;
     font-family: 'Quicksand', sans-serif;
+    text-shadow: 0 0 0 8px black;
+  }
+  #page-subtitle {
+    display: block;
+    padding-bottom: 30px;
+    color: aqua;
+    font-size: 2em;    
+    font-family: 'Cabin', sans-serif;
+    text-shadow: 0 0 0 0 4px black;
+  }
+  
+  .round-button {
+    font-family: 'Raleway', sans-serif;
     font-size: 2em;
     padding: 0.25em 1.5em;
     display: inline-block;
@@ -61,20 +78,21 @@
     border-radius: 2em;
     margin: 5px;
   }
+  
   .round-button:hover {
-    box-shadow: 0px 1px 10px #000;
+    box-shadow: 0px 0px 10px 3px #111;
+  }
+  .round-button:focus {
+    box-shadow: inset 0px 0px 10px 2px rgba(20, 20, 20, 0.40);
   }
   
   #book-list-button {
     color: #fff;
     background-color: chocolate;
-    border: 2px solid darkgoldenrod;
-  }
-
-  #my-list-button {
-    color: white;
-    background-color: teal;
-    border: 2px solid darkcyan;
   }
   
+  #my-list-button {
+    color: white;
+    background-color: mediumslateblue;
+  }
 </style>

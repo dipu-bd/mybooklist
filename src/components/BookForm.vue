@@ -49,7 +49,6 @@
       }
     }
   }
-
 </script>
 
 <style scoped>
@@ -64,7 +63,7 @@
   
   .panel {
     margin: 0;
-    box-shadow: 0px 1px 10px #999;
+    box-shadow: 0px 1px 10px 1px #999;
   }
 
   .panel-heading {
@@ -75,17 +74,5 @@
     font-size: 2em;
     font-family: 'Cabin', sans-serif;
     color: darkslategray;
-  }
-</style>
-
-<style>
-  .vue-form-generator .hint {
-    color: darkslategray;
-    font-family: 'Nunito Sans', sans-serif;
-  }
-  
-  .vue-form-generator .errors {
-    color: red;
-    font-family: 'Inconsolata', monospace;
   }
 </style>

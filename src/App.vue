@@ -11,6 +11,8 @@
   </section>
 </template>
 
+<style src='./assets/app.css'></style>
+
 <script>
   import AppNav from 'components/Navbar'
   import AppView from 'components/AppView'
@@ -31,11 +33,3 @@
   }
 
 </script>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-</style>
