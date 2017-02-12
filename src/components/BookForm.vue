@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import Book from '../schema/book.js'
+  import Book from '../models/book.js'
 
   export default {
     name: 'bookform',
