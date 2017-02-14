@@ -32,17 +32,15 @@
 
 </script>
 
-<style>
-@import url(../../node_modules/bootstrap/dist/css/bootstrap.min.css);
-@import url(../../node_modules/font-awesome/css/font-awesome.min.css);
-@import url(https://fonts.googleapis.com/css?family=Cabin|Gloria+Hallelujah|Inconsolata|Nunito|Nunito+Sans|Pacifico|Quicksand|Raleway|Rubik|Source+Sans+Pro|VT323);
-
+<style> 
 html,
 body {
     margin: 0;
     padding: 0;
 }
+</style>
 
+<style> 
 .vue-form-generator .hint {
     color: darkslategray;
     font-family: 'Nunito Sans', sans-serif;
