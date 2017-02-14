@@ -1,35 +1,16 @@
 <template>
-  <section id="app">
-
-    <app-view>
-      <app-nav slot="navbar" v-show="showNav"></app-nav>
-      <router-view slot="content"></router-view>
-    </app-view>
-
-    <app-footer></app-footer>
-
-  </section>
+  <div id="app">
+    <hello></hello>
+  </div>
 </template>
 
-<style src='./assets/app.css'></style>
-
 <script>
-  import AppNav from 'components/Navbar'
-  import AppView from 'components/AppView'
-  import AppFooter from 'components/Footer'
+import Hello from './components/Hello.vue'
 
-  export default {
-    name: 'app',
-    components: {
-      AppNav,
-      AppView,
-      AppFooter
-    },
-    computed: {
-      showNav() {
-        return this.$route.name !== 'home'
-      }
-    }
+export default {
+  name: 'app',
+  components: {
+    Hello
   }
-
+}
 </script>
